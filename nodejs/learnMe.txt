@@ -1,0 +1,3 @@
+https://www.youtube.com/watch?v=fgTGADljAeg&ab_channel=WebDevSimplified - basic rest api
+https://mongoosejs.com/docs/guide.html#versionKey - __v field in db
+https://medium.com/the-node-js-collection/why-the-hell-would-you-use-node-js-4b053b94ab8e - pros and cons of nodejs

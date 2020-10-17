@@ -1,0 +1,28 @@
+GET http://localhost:3000/users
+###
+
+
+GET http://localhost:3000/users/5f8b10ff59fb5d07007daa98
+###
+
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Vitalik"
+}
+###
+
+
+PATCH http://localhost:3000/users/5f8b10ff59fb5d07007daa98
+Content-Type: application/json
+
+{
+    "name": "Vitalik123"
+}
+###
+
+
+DELETE http://localhost:3000/users/5f8b131359fb5d07007daa99
+###
