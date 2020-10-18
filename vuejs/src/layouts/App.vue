@@ -3,7 +3,7 @@
   <app-header/>
   <nav-topic/>
   <router-view v-slot="slotProps">
-    <keep-alive>
+    <keep-alive max="5">
       <component :is="slotProps.Component" :key="$route.fullPath"></component>
     </keep-alive>
   </router-view>
