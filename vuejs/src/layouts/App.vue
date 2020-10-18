@@ -2,7 +2,11 @@
   <nav-header/>
   <app-header/>
   <nav-topic/>
-  <router-view/>
+  <router-view v-slot="slotProps">
+    <keep-alive>
+      <component :is="slotProps.Component" :key="$route.fullPath"></component>
+    </keep-alive>
+  </router-view>
   <app-footer/>
 </template>
 
