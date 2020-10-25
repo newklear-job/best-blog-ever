@@ -10,16 +10,37 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "name": "Vitalik"
+  "firstName": "Vitalik",
+  "lastName": "Peterherin",
+  "avatar": "https://source.unsplash.com/collection/1346951/1000x500?sig=1",
+  "aboutMe": "YA V AHUY",
+  "socials": {
+    "facebook": "facebook.com",
+    "twitter": ""
+  },
+  "categories": [
+      {
+          "name": "123",
+          "slug": "12345"
+      }
+  ]
 }
 ###
 
 
-PATCH http://localhost:3000/users/5f8b10ff59fb5d07007daa98
+PUT http://localhost:3000/users/5f959e2ec0cb41427ccf7412
 Content-Type: application/json
 
 {
-    "name": "Vitalik123"
+  "firstName": "Vitalik",
+  "lastName": "Peterherin",
+  "avatar": "https://source.unsplash.com/collection/1346951/1000x500?sig=1",
+  "aboutMe": "YA V AHUY",
+  "socials": {
+    "facebook": "facebook.com",
+    "twitter": "",
+    "linkedIn": "linkedIn.com"
+  }
 }
 ###
 

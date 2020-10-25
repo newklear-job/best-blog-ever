@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const User = require('../models/user')
-
+const { User } = require('../models/user')
 // Getting all
 router.get('/', async (req, res) => {
   try {
@@ -19,9 +18,7 @@ router.get('/:id', getUser, (req, res) => {
 
 // Creating one
 router.post('/', async (req, res) => {
-  const user = new User({
-    name: req.body.name
-  })
+  const user = new User(req.body)
   try {
     const newUser = await user.save()
     res.status(201).json(newUser)
@@ -31,10 +28,8 @@ router.post('/', async (req, res) => {
 })
 
 // Updating One
-router.patch('/:id', getUser, async (req, res) => {
-  if (req.body.name != null) {
-    res.user.name = req.body.name
-  }
+router.put('/:id', getUser, async (req, res) => {
+  res.user.set(req.body)
   try {
     const updatedUser = await res.user.save()
     res.json(updatedUser)
