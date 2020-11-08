@@ -312,7 +312,32 @@ const asyncRoutes = [
       }
     ]
   },
-
+  {
+    path: '/users',
+    component: 'layout/Layout',
+    name: 'Users',
+    meta: {
+      title: 'Users',
+      icon: 'users'
+    },
+    children: [
+      {
+        path: '/',
+        component: 'views/users/index',
+        name: 'ListUsers',
+        meta: {
+          title: 'List users',
+          icon: 'user'
+        }
+      },
+      {
+        path: '/create',
+        component: 'views/users/create',
+        name: 'CreateUser',
+        meta: { title: 'Create user' }
+      }
+    ]
+  },
   {
     path: '/example',
     component: 'layout/Layout',
